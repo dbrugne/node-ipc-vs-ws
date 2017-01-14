@@ -63,12 +63,15 @@ series([
   (callback) => {
     backpack.websocket.process = fork(
       join(__dirname, 'children/websocket.js'),
-      { env: { WEBSOCKET_PORT } },
+      { env: { WEBSOCKET_PORT } }
     );
     backpack.websocket.process.on('message', () => {
       backpack.websocket.client.on('connect', (connection) => {
         backpack.websocket.connection = connection;
-        connection.on('message', data => backpack.websocket.cb(JSON.stringify(data)));
+        connection.on('message', (data) => {
+          JSON.parse(data.utf8Data);
+          backpack.websocket.cb();
+        });
         callback(null);
       });
 
