@@ -4,6 +4,7 @@
   "description": "An humble benchmark of Node.js native IPC vs. Websocket communication.",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,10 @@
   "dependencies": {
     "benchmark": "^2.1.3",
     "websocket": "^1.0.24"
+  },
+  "devDependencies": {
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0"
   }
 }
