@@ -13,6 +13,6 @@ wsServer.on('request', (request) => {
   const connection = request.accept('echo-protocol', request.origin);
   connection.on(
     'message',
-    message => connection.sendUTF(JSON.stringify(JSON.parse(message.utf8Data))),
+    message => connection.sendUTF(JSON.stringify(JSON.parse(message.utf8Data)))
   );
 });
