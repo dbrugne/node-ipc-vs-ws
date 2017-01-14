@@ -1,0 +1,23 @@
+{
+  "name": "node-ipc-vs-ws",
+  "version": "1.0.0",
+  "description": "An humble benchmark of Node.js native IPC vs. Websocket communication.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbrugne/node-ipc-vs-ws.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbrugne/node-ipc-vs-ws/issues"
+  },
+  "homepage": "https://github.com/dbrugne/node-ipc-vs-ws#readme",
+  "dependencies": {
+    "benchmark": "^2.1.3",
+    "websocket": "^1.0.24"
+  }
+}
